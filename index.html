@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catch the Fruit</title>
+  <link rel="stylesheet" href="fruit.css">
+</head>
+<body>
+
+  <h1>🍓 Catch The Fruit Game 🍓</h1>
+  <h2 id="scoreDisplay">Score: 0</h2>
+  <h3 id="level">📶 Level: 1</h3>
+  <h3 id="lives">❤️❤️❤️</h3>
+<h2 id="scoreBoard">Score: 0</h2>
+<button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Dark Mode</button>
+  <div class="game-container">
+    <div id="fruit" class="fruit">🍎</div>
+    <div class="basket" id="basket">🧺</div>
+  </div> <!-- end game-container -->
+
+  <!-- Controls for mobile -->
+  <div class="controls">
+    <button onclick="moveLeft()">⬅️</button>
+    <button onclick="moveRight()">➡️</button>
+  </div>
+
+  <button onclick="location.reload()">🎮 Play Again</button>
+  <p>🧺 Catch the fruits and score points!</p>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="Bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  
+  <script src="fruit.js"></script>
+
+</body>
+</html>
