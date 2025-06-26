@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <title>Catch the Fruit</title>
   <link rel="stylesheet" href="fruit.css">
-</head>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png" />
+<link rel="apple-touch-icon" href="icon.png" />
+ </head>
 <body>
 
   <h1>🍓 Catch The Fruit Game 🍓</h1>
@@ -34,6 +37,21 @@
 
   
   <script src="fruit.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then(function () {
+      console.log("✅ Service Worker Registered");
+    });
+  }
+</script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("sw.js")
+      .then(() => console.log("✅ Service Worker Registered!"))
+      .catch((err) => console.log("❌ Registration Failed", err));
+  }
+</script>
 
 </body>
 </html>
